@@ -1,0 +1,260 @@
+<div class="min-h-screen bg-slate-50 text-slate-800">
+
+  <!-- Cover -->
+  <section class="h-40 md:h-52 bg-gradient-to-r from-sky-600 via-sky-500 to-sky-400">
+  </section>
+
+  <!-- Profile Card -->
+  <section class="px-4 md:px-8 -mt-16 md:-mt-20 mb-10">
+    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-md border border-slate-200 p-5 md:p-7">
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+
+        <!-- Left: Avatar + Basic info -->
+        <div class="flex gap-4 md:gap-6 items-end">
+          <!-- Avatar -->
+          <div class="-mt-12">
+            <div class="w-24 h-24 md:w-28 md:h-28 rounded-2xl border-4 border-white bg-slate-300 flex items-center justify-center text-3xl font-semibold">
+              B
+            </div>
+          </div>
+
+          <!-- Text Info -->
+          <div class="space-y-1">
+            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">
+              Book
+            </h1>
+            <p class="text-sm text-slate-500">
+              นักวิชาการคอมพิวเตอร์ · Full-stack Developer · Dashboard Builder
+            </p>
+            <p class="text-xs text-slate-400">
+              📍 Khon Kaen, Thailand · 👨‍💻 Working on healthcare IT & dashboards
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Action buttons -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <button class="px-3 py-2 text-xs md:text-sm border border-slate-300 rounded-lg hover:bg-slate-50">
+            Share Profile
+          </button>
+          <button class="px-4 py-2 text-xs md:text-sm bg-sky-600 text-white rounded-lg hover:bg-sky-700 font-medium">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-6 grid grid-cols-3 md:grid-cols-4 gap-4 text-center text-xs md:text-sm">
+        <div class="border border-slate-100 rounded-xl py-3">
+          <div class="text-xs text-slate-500">Projects</div>
+          <div class="text-lg font-semibold">24</div>
+        </div>
+        <div class="border border-slate-100 rounded-xl py-3">
+          <div class="text-xs text-slate-500">Dashboards</div>
+          <div class="text-lg font-semibold">12</div>
+        </div>
+        <div class="border border-slate-100 rounded-xl py-3">
+          <div class="text-xs text-slate-500">Repositories</div>
+          <div class="text-lg font-semibold">18</div>
+        </div>
+        <div class="hidden md:block border border-slate-100 rounded-xl py-3">
+          <div class="text-xs text-slate-500">Members</div>
+          <div class="text-lg font-semibold">7</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="px-4 md:px-8 pb-12">
+    <div class="max-w-5xl mx-auto space-y-6">
+
+      <!-- Tabs -->
+      <nav class="border-b border-slate-200 flex gap-6 text-sm">
+        <button class="pb-3 border-b-2 border-sky-600 text-sky-600 font-medium">
+          Overview
+        </button>
+        <button class="pb-3 text-slate-500 hover:text-slate-700">
+          Activity
+        </button>
+        <button class="pb-3 text-slate-500 hover:text-slate-700">
+          Settings
+        </button>
+      </nav>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Left column -->
+        <section class="md:col-span-2 space-y-6">
+
+          <!-- About -->
+          <div class="bg-white rounded-xl border border-slate-200 p-5">
+            <h2 class="text-sm font-semibold mb-3">
+              About
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              ทำงานด้านระบบสารสนเทศโรงพยาบาล พัฒนา dashboard, ระบบรายงาน, 
+              และเครื่องมือช่วยแพทย์–พยาบาลในการตัดสินใจ  
+              สนใจเรื่องเทคโนโลยี, ธุรกิจ, เศรษฐกิจ, การเงิน และระบบลงทุนอัตโนมัติ
+            </p>
+
+            <dl class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs text-slate-500">
+              <div class="flex justify-between gap-2">
+                <dt class="font-medium text-slate-600">Email</dt>
+                <dd class="truncate max-w-[160px] text-right">you@example.com</dd>
+              </div>
+              <div class="flex justify-between gap-2">
+                <dt class="font-medium text-slate-600">Role</dt>
+                <dd class="text-right">Computer Science / IT</dd>
+              </div>
+              <div class="flex justify-between gap-2">
+                <dt class="font-medium text-slate-600">Focus</dt>
+                <dd class="text-right">Healthcare IT, Dashboards</dd>
+              </div>
+              <div class="flex justify-between gap-2">
+                <dt class="font-medium text-slate-600">Timezone</dt>
+                <dd class="text-right">GMT+7 (Bangkok)</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Skills -->
+          <div class="bg-white rounded-xl border border-slate-200 p-5">
+            <h2 class="text-sm font-semibold mb-3">
+              Skills
+            </h2>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100">Angular</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">TailwindCSS</span>
+              <span class="px-3 py-1 rounded-full bg-slate-50 text-slate-700 border border-slate-200">PHP / Laravel</span>
+              <span class="px-3 py-1 rounded-full bg-slate-50 text-slate-700 border border-slate-200">MySQL / MariaDB</span>
+              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">Dashboard Design</span>
+              <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 border border-violet-100">Data Visualization</span>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="bg-white rounded-xl border border-slate-200 p-5">
+            <h2 class="text-sm font-semibold mb-3">
+              Recent Activity
+            </h2>
+
+            <ul class="space-y-3 text-sm">
+              <li class="flex justify-between gap-4">
+                <div class="flex-1">
+                  <p class="font-medium text-slate-700">
+                    Updated OPD/IPD dashboard layout
+                  </p>
+                  <p class="text-xs text-slate-500">
+                    ปรับปรุงกราฟสิทธิการรักษา และเพิ่ม widget ผู้ป่วยในวันนี้
+                  </p>
+                </div>
+                <span class="text-xs text-slate-400 whitespace-nowrap">
+                  2 hours ago
+                </span>
+              </li>
+
+              <li class="flex justify-between gap-4">
+                <div class="flex-1">
+                  <p class="font-medium text-slate-700">
+                    Deployed new health calculator
+                  </p>
+                  <p class="text-xs text-slate-500">
+                    BMI/BMR/TDEE calculator (PHP 5.6 compatible + Tailwind)
+                  </p>
+                </div>
+                <span class="text-xs text-slate-400 whitespace-nowrap">
+                  Yesterday
+                </span>
+              </li>
+
+              <li class="flex justify-between gap-4">
+                <div class="flex-1">
+                  <p class="font-medium text-slate-700">
+                    GitHub repo updated
+                  </p>
+                  <p class="text-xs text-slate-500">
+                    Pushed Angular 20 + Tailwind 4.2 starter dashboard template
+                  </p>
+                </div>
+                <span class="text-xs text-slate-400 whitespace-nowrap">
+                  3 days ago
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <!-- Right column -->
+        <section class="space-y-6">
+
+          <!-- Quick Info -->
+          <div class="bg-white rounded-xl border border-slate-200 p-5 text-sm">
+            <h2 class="text-sm font-semibold mb-3">
+              Quick Info
+            </h2>
+            <ul class="space-y-2 text-xs text-slate-600">
+              <li class="flex justify-between">
+                <span>Member since</span>
+                <span class="font-medium text-slate-700">2023</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Last login</span>
+                <span class="font-medium text-slate-700">10 min ago</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Account type</span>
+                <span class="font-medium text-slate-700">Admin</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links / Social -->
+          <div class="bg-white rounded-xl border border-slate-200 p-5 text-sm">
+            <h2 class="text-sm font-semibold mb-3">
+              Links
+            </h2>
+            <ul class="space-y-2 text-xs">
+              <li class="flex items-center justify-between">
+                <span class="text-slate-600">GitHub</span>
+                <a href="#" class="text-sky-600 hover:underline">
+                  view profile
+                </a>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-600">Portfolio</span>
+                <a href="#" class="text-sky-600 hover:underline">
+                  open site
+                </a>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-600">Contact</span>
+                <a href="#" class="text-sky-600 hover:underline">
+                  send message
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Small note -->
+          <div class="bg-slate-900 rounded-xl text-slate-100 p-5 text-xs space-y-2">
+            <p class="font-semibold">
+              Profile tips
+            </p>
+            <p class="text-slate-300">
+              เติมข้อมูลโปรไฟล์, ทักษะ, และลิงก์ portfolio  
+              เพื่อให้ทีมอื่นเข้าใจสิ่งที่คุณทำได้ง่ายขึ้น
+            </p>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+</div>
