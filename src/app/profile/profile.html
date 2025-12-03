@@ -1,4 +1,4 @@
-<form class="max-w-5xl mx-auto px-6 py-10 space-y-10 bg-gray-50">
+<form  [formGroup]="formData" (ngSubmit)="onSubmit()" class="max-w-5xl mx-auto px-6 py-10 space-y-10 bg-gray-50">
 
   <!-- Profile Section -->
   <div class="rounded-2xl border border-gray-200 bg-white shadow-sm px-6 py-8 space-y-8">
