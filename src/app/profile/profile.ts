@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { DialogDataExampleDialog } from '../home/dialog';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogDataExampleProfileDialog } from './dialog';
 
 @Component({
   selector: 'app-profile',
@@ -51,11 +51,18 @@ export class Profile {
   }
   
   openDialog() {
-      this.dialog.open(DialogDataExampleDialog, {
+     const dialogRef = this.dialog.open(DialogDataExampleProfileDialog, {
         data:{
           formProfile: this.formProfile.value,
         },
         disableClose: false,
+        
       });
+      dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      if (result !== undefined) {
+        console.log(`Dialog result: ${result.data}`);
+      }
+    });
     }
 }
