@@ -1,4 +1,4 @@
-<form  [formGroup]="formData" (ngSubmit)="onSubmit()" class="max-w-5xl mx-auto px-6 py-10 space-y-10 bg-gray-50">
+<form  [formGroup]="formProfile" (ngSubmit)="onSubmit()" class="max-w-5xl mx-auto px-6 py-10 space-y-10 bg-gray-50">
 
   <!-- Profile Section -->
   <div class="rounded-2xl border border-gray-200 bg-white shadow-sm px-6 py-8 space-y-8">
@@ -23,6 +23,7 @@
             workcation.com/
           </span>
           <input
+            formControlName="username"
             id="username"
             name="username"
             type="text"
@@ -38,6 +39,7 @@
           About
         </label>
         <textarea
+          formControlName="about"
           id="about"
           name="about"
           rows="3"
@@ -49,7 +51,7 @@
       </div>
 
       <!-- Photo -->
-      <div class="col-span-full">
+      <!-- <div class="col-span-full">
         <label class="block text-sm font-medium text-gray-900">
           Photo
         </label>
@@ -68,10 +70,10 @@
             Change
           </button>
         </div>
-      </div>
+      </div> -->
 
       <!-- Cover photo -->
-      <div class="col-span-full">
+      <!-- <div class="col-span-full">
         <label class="block text-sm font-medium text-gray-900">
           Cover photo
         </label>
@@ -103,7 +105,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -122,27 +124,27 @@
     <div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6">
 
       <div class="sm:col-span-3">
-        <label for="first-name" class="block text-sm font-medium text-gray-900">
+        <label for="fname" class="block text-sm font-medium text-gray-900">
           First name
         </label>
         <input
-          id="first-name"
-          name="first-name"
+          formControlName="fname"
+          id="fname"
+          name="fname"
           type="text"
-          autocomplete="given-name"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
 
       <div class="sm:col-span-3">
-        <label for="last-name" class="block text-sm font-medium text-gray-900">
+        <label for="lname" class="block text-sm font-medium text-gray-900">
           Last name
         </label>
         <input
-          id="last-name"
-          name="last-name"
+          formControlName="lname"
+          id="lname"
+          name="lname"
           type="text"
-          autocomplete="family-name"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
@@ -152,10 +154,10 @@
           Email address
         </label>
         <input
+          formControlName="email"
           id="email"
           name="email"
           type="email"
-          autocomplete="email"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
@@ -166,36 +168,27 @@
         </label>
         <div class="mt-2 relative">
           <select
+            formControlName="country"
             id="country"
             name="country"
-            autocomplete="country-name"
             class="block w-full rounded-lg border border-gray-300 bg-white py-2 pl-3 pr-8 text-sm text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
           >
             <option>United States</option>
             <option>Canada</option>
             <option>Mexico</option>
-          </select>
-          <svg
-            class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-          >
-            <path
-              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-            />
-          </svg>
+        </select>
         </div>
       </div>
 
       <div class="col-span-full">
-        <label for="street-address" class="block text-sm font-medium text-gray-900">
-          Street address
+        <label for="address" class="block text-sm font-medium text-gray-900">
+          Address
         </label>
         <input
-          id="street-address"
-          name="street-address"
+          formControlName="address"
+          id="address"
+          name="address"
           type="text"
-          autocomplete="street-address"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
@@ -205,10 +198,10 @@
           City
         </label>
         <input
+          formControlName="city"
           id="city"
           name="city"
           type="text"
-          autocomplete="address-level2"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
@@ -218,23 +211,23 @@
           State / Province
         </label>
         <input
+          formControlName="region"
           id="region"
           name="region"
           type="text"
-          autocomplete="address-level1"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
 
       <div class="sm:col-span-2">
-        <label for="postal-code" class="block text-sm font-medium text-gray-900">
+        <label for="pcode" class="block text-sm font-medium text-gray-900">
           ZIP / Postal code
         </label>
         <input
-          id="postal-code"
-          name="postal-code"
+          formControlName="pcode"
+          id="pcode"
+          name="pcode"
           type="text"
-          autocomplete="postal-code"
           class="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
@@ -264,6 +257,7 @@
         <div class="space-y-4">
           <div class="flex gap-3">
             <input
+              formControlName="comments"
               id="comments"
               name="comments"
               type="checkbox"
@@ -280,6 +274,7 @@
 
           <div class="flex gap-3">
             <input
+              formControlName="candidates"
               id="candidates"
               name="candidates"
               type="checkbox"
@@ -295,6 +290,7 @@
 
           <div class="flex gap-3">
             <input
+              formControlName="offers"
               id="offers"
               name="offers"
               type="checkbox"
@@ -322,7 +318,7 @@
         <div class="space-y-3">
           <div class="flex items-center gap-3">
             <input
-              id="push-everything"
+              id="peverything"
               name="push-notifications"
               type="radio"
               class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -335,7 +331,7 @@
 
           <div class="flex items-center gap-3">
             <input
-              id="push-email"
+              id="pemail"
               name="push-notifications"
               type="radio"
               class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -347,7 +343,7 @@
 
           <div class="flex items-center gap-3">
             <input
-              id="push-nothing"
+              id="pnothing"
               name="push-notifications"
               type="radio"
               class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
