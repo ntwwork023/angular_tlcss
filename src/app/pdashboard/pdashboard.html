@@ -1,0 +1,146 @@
+<div class="bg-slate-100 text-slate-800">
+    <div class="grid grid-cols-3 gap-4">
+    <div class="col-span-2">
+      <h1>Performance Monitoring Dashboard</h1>
+    </div>
+    <div class="">
+      <section>
+          <mat-button-toggle-group
+            name="favoriteColor"
+            aria-label="Favorite Color"
+            [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
+          >
+            <mat-button-toggle value="year">Year</mat-button-toggle>
+            <mat-button-toggle value="quarter">Quarter</mat-button-toggle>
+            <mat-button-toggle value="month">Month</mat-button-toggle>
+            <mat-button-toggle value="week">Week</mat-button-toggle>
+            <mat-button-toggle value="day">Day</mat-button-toggle>
+          </mat-button-toggle-group>
+        </section>
+    </div>
+  </div>
+  <div class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">
+    <h1>Environmental Performance</h1>
+    <div class="grid grid-cols-5 gap-2">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> Australian Shepherd</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>GHG Reduction</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> Solar Production</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> Manageable Waste</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+       <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> Energy Consumption</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="col-span-2">
+        <h1>Solar Energy Production</h1>
+      </div>
+      <div class="">
+        <section>
+          <mat-button-toggle-group
+            name="favoriteColor"
+            aria-label="Favorite Color"
+            [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
+          >
+            <mat-button-toggle value="year">Year</mat-button-toggle>
+            <mat-button-toggle value="quarter">Quarter</mat-button-toggle>
+            <mat-button-toggle value="month">Month</mat-button-toggle>
+            <mat-button-toggle value="week">Week</mat-button-toggle>
+            <mat-button-toggle value="day">Day</mat-button-toggle>
+          </mat-button-toggle-group>
+        </section>
+      </div>
+    </div>
+    <div>
+        <canvas #chartCanvas></canvas>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">
+    <h1>Traffic Performance</h1>
+    <div class="grid grid-cols-4 gap-2">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> People Counting</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> People Counting</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> EAST Parking</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title> WEST Parking</mat-card-title>
+          <mat-card-subtitle class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2">Herding group</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs">
+          MoM -23%  YoY +20%
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  </div>
+</div>

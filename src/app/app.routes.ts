@@ -4,6 +4,7 @@ import { About } from './about/about';
 import { Dashboard } from './dashboard/dashboard';
 import { Setting } from './setting/setting';
 import { Home } from './home/home';
+import { Pdashboard } from './pdashboard/pdashboard';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,10 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         component: Dashboard
+    },
+    {
+        path: 'performance',
+        component: Pdashboard
     },
     {
         path: 'home',
