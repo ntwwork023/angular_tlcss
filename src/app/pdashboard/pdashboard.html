@@ -20,16 +20,17 @@
   </div>
   <div class="bg-white shadow-sm rounded-xl border border-slate-200 p-4 flex flex-col gap-2">
     <h1 class="text-xl font-semibold">Environmental Performance</h1>
-    <div class="grid grid-cols-1 gap-2 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+    <div class="grid gap-2 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-2 xs:grid-cols-1">
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title class="flex justify-center">
+          <mat-card-title class="text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              stroke-width="2"
               stroke="currentColor"
-              class="size-50 fill-blue-500"
+              class="lg:size-50 md:size-35 top-0"
             >
               <path
                 stroke-linecap="round"
@@ -37,6 +38,7 @@
                 d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
               />
             </svg>
+            <div class="text-xl font-semibold">GOOD</div>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
@@ -44,7 +46,76 @@
 
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title>GHG Reduction</mat-card-title>
+          <mat-card-title>
+            GHG Reduction
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
+          <mat-card-subtitle class="bg-white mt-5 pr-3 rounded-xl border border-slate-200 p-4">
+            <h1>37.3K</h1>
+            <div>kgCO2eq</div>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>
+            Solar Production
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
+          <mat-card-subtitle
+            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
+            >Herding group
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
+      </mat-card>
+
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>
+            Manageable Waste
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
           <mat-card-subtitle
             class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
             >Herding group</mat-card-subtitle
@@ -55,29 +126,23 @@
 
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title> Solar Production</mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
-        </mat-card-header>
-        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
-      </mat-card>
-
-      <mat-card appearance="outlined">
-        <mat-card-header>
-          <mat-card-title> Manageable Waste</mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
-        </mat-card-header>
-        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
-      </mat-card>
-
-      <mat-card appearance="outlined">
-        <mat-card-header>
-          <mat-card-title> Energy Consumption</mat-card-title>
+          <mat-card-title>
+            Energy Consumption
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="red"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="red"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
           <mat-card-subtitle
             class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
             >Herding group</mat-card-subtitle
@@ -118,44 +183,115 @@
     <div class="grid grid-cols-4 gap-2">
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title> People Counting</mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
+          <mat-card-title class="text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="lg:size-50 md:size-35 top-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+            <div class="text-xl font-semibold">GOOD</div>
+          </mat-card-title>
         </mat-card-header>
         <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
       </mat-card>
 
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title> People Counting</mat-card-title>
+          <mat-card-title>
+            People Counting
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
           <mat-card-subtitle
             class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
+            >Herding group
+          </mat-card-subtitle>
+          <mat-card-subtitle
+            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
+            >Herding group
+          </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
       </mat-card>
 
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title> EAST Parking</mat-card-title>
+          <mat-card-title>
+            EAST Parking
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
           <mat-card-subtitle
             class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
+            >Herding group</mat-card-subtitle>
+          <mat-card-subtitle
+            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
+            >Herding group
+          </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
       </mat-card>
 
       <mat-card appearance="outlined">
         <mat-card-header>
-          <mat-card-title> WEST Parking</mat-card-title>
+          <mat-card-title>
+            WEST Parking
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="green"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="green"
+              class="size-6 absolute top-1 right-0"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+          </mat-card-title>
           <mat-card-subtitle
             class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
+            >Herding group
+            </mat-card-subtitle>
+          <mat-card-subtitle
+            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
+            >Herding group
+          </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
       </mat-card>
