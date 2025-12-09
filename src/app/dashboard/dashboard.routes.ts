@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
-import { Profile } from './profile/profile';
-import { About } from './about/about';
-import { Dashboard } from './dashboard/dashboard';
-import { Setting } from './setting/setting';
-import { Home } from './home/home';
-import { Pdashboard } from './pdashboard/pdashboard';
+import { Dashboard } from './dashboard';
+import { Home } from '../home/home';
+import { Setting } from '../setting/setting';
+import { Profile } from '../profile/profile';
+import { About } from '../about/about';
 
 export const routes: Routes = [
     {
@@ -14,10 +13,6 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         component: Dashboard
-    },
-    {
-        path: 'performance',
-        component: Pdashboard
     },
     {
         path: 'home',
