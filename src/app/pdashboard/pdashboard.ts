@@ -2,13 +2,10 @@ import {
   ChangeDetectionStrategy,
   Component,
   signal,
-  ViewChild,
-  ElementRef,
   AfterViewInit,
 } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
-import Chart from 'chart.js/auto';
 import { ChartComponent } from '../chart/chart.component';
 
 @Component({
