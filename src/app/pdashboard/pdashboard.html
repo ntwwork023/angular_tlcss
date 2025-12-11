@@ -21,7 +21,7 @@
   <div class="bg-white shadow-sm rounded-xl border border-slate-200 p-4 flex flex-col gap-2">
     <h1 class="text-xl font-semibold">Environmental Performance</h1>
 
-    <div class="grid gap-4 xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <div class="grid gap-4 grid-cols-5">
       <!-- Overall status -->
       <mat-card
         appearance="outlined"
@@ -309,18 +309,16 @@
       >
         <mat-card-content class="flex flex-col items-center gap-2 py-2">
           <div class="flex w-full items-center justify-center text-black">
-          <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="yellow"
+              fill="#ffbb00"
               class="lg:size-50 md:size-50 top-0"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm3 10.5a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5h6Z"
+                clip-rule="evenodd"
               />
             </svg>
           </div>
@@ -379,7 +377,7 @@
       >
         <mat-card-header>
           <mat-card-title>
-            People Counting
+            <h1 class="font-semibold text-xl">People Counting</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="green"
@@ -395,16 +393,25 @@
               />
             </svg>
           </mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group
-          </mat-card-subtitle>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group
-          </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
+        <mat-card-content class="grid grid-cols-1 mt-3">
+          <div class="bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1">
+            <div class="text-sm font-medium text-slate-800">Herding group</div>
+            <div class="text-[11px] text-slate-500">kWh consumed</div>
+          </div>
+          <div
+            class="mt-3 bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1"
+          >
+            <div class="text-sm font-medium text-slate-800">Herding group</div>
+            <div class="text-[11px] text-slate-500">kWh consumed</div>
+          </div>
+        </mat-card-content>
+        <mat-card-footer
+          class="border-t border-slate-100 pt-2 mt-3 text-[11px] text-slate-500 flex justify-between"
+        >
+          <span>MoM -23%</span>
+          <span class="text-emerald-600 font-medium">YoY +20%</span>
+        </mat-card-footer>
       </mat-card>
 
       <!-- EAST Parking -->
@@ -414,7 +421,7 @@
       >
         <mat-card-header>
           <mat-card-title>
-            EAST Parking
+            <h1 class="font-semibold text-xl">EAST Parking</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="green"
@@ -430,16 +437,26 @@
               />
             </svg>
           </mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group</mat-card-subtitle
-          >
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group
-          </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
+
+        <mat-card-content class="grid grid-cols-1 mt-3">
+          <div class="bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1">
+            <div class="text-sm font-medium text-slate-800">Herding group</div>
+            <div class="text-[11px] text-slate-500">kWh consumed</div>
+          </div>
+          <div
+            class="mt-3 bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1"
+          >
+            <div class="text-sm font-medium text-slate-800">Herding group</div>
+            <div class="text-[11px] text-slate-500">kWh consumed</div>
+          </div>
+        </mat-card-content>
+        <mat-card-footer
+          class="border-t border-slate-100 pt-2 mt-3 text-[11px] text-slate-500 flex justify-between"
+        >
+          <span>MoM -23%</span>
+          <span class="text-emerald-600 font-medium">YoY +20%</span>
+        </mat-card-footer>
       </mat-card>
 
       <!-- WEST Parking -->
@@ -449,7 +466,7 @@
       >
         <mat-card-header>
           <mat-card-title>
-            WEST Parking
+            <h1 class="font-semibold text-xl">WEST Parking</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="green"
@@ -465,16 +482,30 @@
               />
             </svg>
           </mat-card-title>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group
-          </mat-card-subtitle>
-          <mat-card-subtitle
-            class="bg-white rounded-xl border border-slate-200 p-4 flex flex-col gap-2"
-            >Herding group
-          </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content class="text-xs"> MoM -23% YoY +20% </mat-card-content>
+
+        <mat-card-content class="grid grid-cols-1 mt-3">
+          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3">
+            <div class="text-[16px] font-semibold text-slate-800">Car</div>
+            <div class="flex justify-between">
+              <div class="text-[24px] font-semibold pt-1">9.3K</div>
+              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3 mt-3">
+            <div class="text-[16px] font-semibold text-slate-800">Motorcycle</div>
+            <div class="flex justify-between">
+              <div class="text-[24px] font-semibold pt-1">17.4K</div>
+              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-footer
+          class="pt-2 mt-3 text-[11px] text-slate-500 flex justify-between content-end">
+          <span class="ml-3 text-emerald-600 font-medium"> WoW -23% </span>
+          <span class="text-emerald-600 font-medium"> MoM -23% </span>
+          <span class="mr-3 text-emerald-600 font-medium"> YoY +20% </span>
+        </mat-card-footer>
       </mat-card>
     </div>
   </div>
