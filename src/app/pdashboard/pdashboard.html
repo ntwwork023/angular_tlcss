@@ -1,27 +1,28 @@
 <div class="bg-slate-100 text-slate-800 p-6 space-y-6">
-  <div class="grid grid-cols-3 gap-4 items-center">
-    <div class="col-span-2">
-      <h1 class="text-xl font-semibold">Performance Monitoring Dashboard</h1>
-    </div>
-    <div class="col-span-1">
-      <mat-button-toggle-group
-        class="rounded-xsl shadow-sm border border-slate-200 p-1 bg-white"
-        name="favoriteColor"
-        aria-label="Favorite Color"
-        [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
+  <div class="header-box">
+    <h1 class="text-xl font-semibold">Performance Monitoring Dashboard</h1>
+
+    <div animationDuration="0ms" class="time-box">
+      <div
+        animationDuration="0ms"
+        *ngFor="let item of ' '.repeat(5).split(''); let index = index"
+        (click)="activeDate = index"
+        [ngClass]="{ activeIndexs: activeDate == index, activeDate: activeDate != index }"
+        style="width: 100%"
       >
-        <mat-button-toggle value="year">Year</mat-button-toggle>
-        <mat-button-toggle value="quarter">Quarter</mat-button-toggle>
-        <mat-button-toggle value="month">Month</mat-button-toggle>
-        <mat-button-toggle value="week">Week</mat-button-toggle>
-        <mat-button-toggle value="day">Day</mat-button-toggle>
-      </mat-button-toggle-group>
+        <div class="body-slime-btn">
+          @if (index == 0){ {{ 'year' }} } @else if(index == 1){ {{ 'quarter' }} } @else if(index ==
+          2){ {{ 'month' }} } @else if(index == 3){ {{ 'week' }} } @else if(index == 4){
+          {{ 'today' }} }
+          <!-- @else if(index == 5){ {{'recycle.date' | translate}} } -->
+        </div>
+      </div>
     </div>
   </div>
   <div class="bg-white shadow-sm rounded-xl border border-slate-200 p-4 flex flex-col gap-2">
     <h1 class="text-xl font-semibold">Environmental Performance</h1>
 
-    <div class="grid gap-4 grid-cols-5">
+    <div class="grid gap-4 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
       <!-- Overall status -->
       <mat-card
         appearance="outlined"
@@ -29,20 +30,37 @@
       >
         <mat-card-content class="flex flex-col items-center gap-2 py-2">
           <div class="flex w-full items-center justify-center text-black">
+            @if (checked ==1) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              stroke-width="1.5"
+              stroke="green"
+              class="size-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+              />
+            </svg>
+            }@else if (checked ==2) {
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
               stroke="currentColor"
               class="size-30"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                d="M15.182 16.318A4.486 4.486 0 0 0 12.016 15a4.486 4.486 0 0 0-3.198 1.318M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
               />
             </svg>
+            }
           </div>
           <div class="text-2xl font-semibold text-slate-900 text-center">GOOD</div>
         </mat-card-content>
@@ -91,9 +109,8 @@
           </span>
         </mat-card-footer>
       </mat-card>
-
       <!-- GHG Reduction -->
-      <mat-card
+      <!-- <mat-card
         appearance="outlined"
         class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
       >
@@ -124,177 +141,71 @@
         </mat-card-header>
 
         <mat-card-content>
-          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3">
+          <div class="rounded-xl border border-slate-200 px-4 py-3">
             <div class="text-[16px] font-semibold text-slate-800">Car</div>
-            <div class="flex justify-between">
-              <div class="text-[24px] font-semibold pt-1">37.3K</div>
-              <div class="text-[11px] font-semibold pt-2 mr-8">kgCO₂eq</div>
+            <div class="flex gap-5">
+              <div class="text-[24px] font-semibold pt-1">29.4K</div>
+              <div class="text-[11px] font-semibold pt-2 mr-8">KWh</div>
             </div>
           </div>
         </mat-card-content>
 
-        <mat-card-footer class="pt-2 mt-3 text-[11px] text-slate-500 flex justify-between">
-          <span>MoM -23%</span>
-          <span class="text-emerald-600 font-medium">YoY +20%</span>
-        </mat-card-footer>
-      </mat-card>
-
-      <!-- Solar Production -->
-      <mat-card
-        appearance="outlined"
-        class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
-      >
-        <mat-card-header class="relative pb-0">
-          <mat-card-title
-            class="flex items-center justify-between text-sm font-semibold text-slate-800"
-          >
-            <span>Solar Production</span>
-            <span
-              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-emerald-600"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="red"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="red"
-                class="size-6 absolute top-1 right-0"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                />
-              </svg>
-            </span>
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content
-          class="mt-3 bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1"
-        >
-          <div class="text-sm font-medium text-slate-800">Herding group</div>
-          <div class="text-[11px] text-slate-500">kWh consumed</div>
-        </mat-card-content>
         <mat-card-footer
-          class="border-t border-slate-100 pt-2 mt-3 text-[11px] text-slate-500 flex justify-between"
+          class="pt-2 mt-3 text-[11px] text-slate-500 flex grid h-27 grid-cols-2 content-end"
         >
           <span>MoM -23%</span>
           <span class="text-emerald-600 font-medium">YoY +20%</span>
         </mat-card-footer>
-      </mat-card>
+      </mat-card> -->
 
-      <!-- Manageable Waste -->
-      <mat-card
-        appearance="outlined"
-        class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
-      >
-        <mat-card-header class="relative pb-0">
-          <mat-card-title
-            class="flex items-center justify-between text-sm font-semibold text-slate-800"
-          >
-            <span>Manageable Waste</span>
-            <span
-              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-emerald-600"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="red"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="red"
-                class="size-6 absolute top-1 right-0"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                />
-              </svg>
-            </span>
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content
-          class="mt-3 bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1"
-        >
-          <div class="text-sm font-medium text-slate-800">Herding group</div>
-          <div class="text-[11px] text-slate-500">kWh consumed</div>
-        </mat-card-content>
-        <mat-card-footer
-          class="border-t border-slate-100 pt-2 mt-3 text-[11px] text-slate-500 flex justify-between"
-        >
+      @for (item of dataEnvironmental; track item.title) {
+      <div class="card">
+        <div class="test-box">
+          <p>{{ item.title }}</p>
+          <div class="car-box">
+            <!-- <p>Cars</p> -->
+            <div class="unit">
+              <span>{{ item.value }}</span>
+              <span class="txt-unit">{{ item.unit }}</span>
+            </div>
+          </div>
+          @if (item.title == 'GHG Reduction') {
+          <div class="solar-box">
+            <span class="box-1">14.3K</span>
+            <span class="box-2">23K</span>
+          </div>
+          <div class="solar-box" style="border: unset">
+            <span class="txt-1">Solar Production</span>
+            <span class="txt-2">Water Production</span>
+          </div>
+          }
+        </div>
+        <div class="footer">
           <span>MoM -23%</span>
-          <span class="text-emerald-600 font-medium">YoY +20%</span>
-        </mat-card-footer>
-      </mat-card>
-
-      <!-- Energy Consumption -->
-      <mat-card
-        appearance="outlined"
-        class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
-      >
-        <mat-card-header class="relative pb-0">
-          <mat-card-title
-            class="flex items-center justify-between text-sm font-semibold text-slate-800"
-          >
-            <span>Energy Consumption</span>
-            <span
-              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-50 text-red-500"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="yellow"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="yellow"
-                class="size-6 absolute top-1 right-0"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                />
-              </svg>
-            </span>
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content
-          class="mt-3 bg-slate-50 rounded-xl border border-slate-200 px-4 py-3 flex flex-col gap-1"
-        >
-          <div class="text-sm font-medium text-slate-800">Herding group</div>
-          <div class="text-[11px] text-slate-500">kWh consumed</div>
-        </mat-card-content>
-
-        <mat-card-footer
-          class="border-t border-slate-100 pt-2 mt-3 text-[11px] text-slate-500 flex justify-between"
-        >
-          <span class="text-red-600 font-medium">MoM -23%</span>
           <span>YoY +20%</span>
-        </mat-card-footer>
-      </mat-card>
+        </div>
+      </div>
+      }
     </div>
 
-    <div class="grid grid-cols-3 gap-4 mt-5 mb-5">
-      <div class="col-span-2">
-        <h1 class="text-xl font-semibold">Solar Energy Production</h1>
-      </div>
-      <div class="col-span-1">
-        <section>
-          <mat-button-toggle-group
-            class="bg-white shadow-sm rounded-lg shadow-sm border border-slate-200 p-1"
-            name="favoriteColor"
-            aria-label="Favorite Color"
-            [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
-          >
-            <mat-button-toggle value="year">Year</mat-button-toggle>
-            <mat-button-toggle value="quarter">Quarter</mat-button-toggle>
-            <mat-button-toggle value="month">Month</mat-button-toggle>
-            <mat-button-toggle value="week">Week</mat-button-toggle>
-            <mat-button-toggle value="day">Day</mat-button-toggle>
-          </mat-button-toggle-group>
-        </section>
+    <div class="header-box">
+      <h1 class="text-xl font-semibold">Performance Monitoring Dashboard</h1>
+
+      <div animationDuration="0ms" class="time-box">
+        <div
+          animationDuration="0ms"
+          *ngFor="let item of ' '.repeat(5).split(''); let index = index"
+          (click)="activeSolar = index"
+          [ngClass]="{ activeIndexs: activeSolar == index, activeSolar: activeSolar != index }"
+          style="width: 100%"
+        >
+          <div class="body-slime-btn">
+            @if (index == 0){ {{ 'year' }} } @else if(index == 1){ {{ 'quarter' }} } @else if(index
+            == 2){ {{ 'month' }} } @else if(index == 3){ {{ 'week' }} } @else if(index == 4){
+            {{ 'today' }} }
+            <!-- @else if(index == 5){ {{'recycle.date' | translate}} } -->
+          </div>
+        </div>
       </div>
     </div>
     <div>
@@ -350,7 +261,7 @@
               />
             </svg>
           </span>
- 
+
           <span
             class="bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-evenly"
           >

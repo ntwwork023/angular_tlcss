@@ -7,18 +7,30 @@ import {
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { ChartComponent } from '../chart/chart.component';
+import { Title } from 'chart.js';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pdashboard',
-  imports: [MatButtonToggleModule, MatCardModule, ChartComponent],
+  imports: [MatButtonToggleModule, MatCardModule, ChartComponent,  CommonModule ],
   templateUrl: './pdashboard.html',
   styleUrl: './pdashboard.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
 export class Pdashboard implements AfterViewInit {
+  checked = 1;
+
+
+  dataEnvironmental = [
+    { title: 'GHG Reduction', value: "37.3K", unit: 'kgCO₂eq' },
+    { title: 'Solar Production', value: "29.4K", unit: 'KWh' },
+    { title: 'Manageable Waste', value: "14.2", unit: 'Tons' },
+    { title: 'Energy Consumption', value: "243", unit: 'KWh' },
+  ]
   
-  
+  activeDate = 0;
+  activeSolar = 0;
 
   hideSingleSelectionIndicator = signal(false);
   datachart= {
@@ -77,4 +89,10 @@ export class Pdashboard implements AfterViewInit {
   ngAfterViewInit() {
  
   }
+
+  date(data: number){
+    this.activeDate = data;
+    console.log(this.activeDate);
+  }
+
 }
