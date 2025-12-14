@@ -305,7 +305,7 @@
       </mat-card>
 
       <!-- People Counting -->
-      <mat-card
+      <!-- <mat-card
         class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
         appearance="outlined"
       >
@@ -351,107 +351,33 @@
           <span class="text-black font-medium"> MoM -23% </span>
           <span class="mr-3 text-black font-medium"> YoY +20% </span>
         </mat-card-footer>
-      </mat-card>
+      </mat-card> -->
 
-      <!-- EAST Parking -->
-      <mat-card
-        class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
-        appearance="outlined"
-      >
-        <mat-card-header>
-          <mat-card-title>
-            <h1 class="font-semibold text-xl">EAST Parking</h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="green"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="green"
-              class="size-6 absolute top-1 right-0"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-              />
-            </svg>
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content class="grid grid-cols-1 mt-3">
-          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3">
-            <div class="text-[16px] font-semibold text-slate-800">Car</div>
-            <div class="flex justify-between">
-              <div class="text-[24px] font-semibold pt-1">91.2K</div>
-              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
+      @for (item of dataTraffic; track item.title) {
+      <div class="card">
+        <div class="test-box">
+          <p>{{ item.title }}</p>
+          <div class="car-box">
+            <div class="unit">
+              <p class=" mb-1">Cars</p>
+              <span>{{ item.car }}</span>
+              <span class="txt-unit">{{ item.unit }}</span>
             </div>
           </div>
-          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3 mt-3">
-            <div class="text-[16px] font-semibold text-slate-800">Motorcycle</div>
-            <div class="flex justify-between">
-              <div class="text-[24px] font-semibold pt-1">72.3K</div>
-              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
+          <div class="car-box">
+            <div class="unit">
+              <p class=" mb-1">Motorcycle</p>
+              <span>{{ item.motorcycle }}</span>
+              <span class="txt-unit">{{ item.unit }}</span>
             </div>
           </div>
-        </mat-card-content>
-        <mat-card-footer
-          class="pt-2 mt-3 text-[11px] text-slate-500 flex justify-between content-end"
-        >
-          <span class="ml-3 text-black font-medium"> WoW -23% </span>
-          <span class="text-black font-medium"> MoM -23% </span>
-          <span class="mr-3 text-black font-medium"> YoY +20% </span>
-        </mat-card-footer>
-      </mat-card>
-
-      <!-- WEST Parking -->
-      <mat-card
-        class="rounded-2xl border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 bg-gradient-to-b from-slate-50 to-white"
-        appearance="outlined"
-      >
-        <mat-card-header>
-          <mat-card-title>
-            <h1 class="font-semibold text-xl">WEST Parking</h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="green"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="green"
-              class="size-6 absolute top-1 right-0"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-              />
-            </svg>
-          </mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content class="grid grid-cols-1 mt-3">
-          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3">
-            <div class="text-[16px] font-semibold text-slate-800">Car</div>
-            <div class="flex justify-between">
-              <div class="text-[24px] font-semibold pt-1">9.3K</div>
-              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 rounded-xl border border-slate-200 px-4 py-3 mt-3">
-            <div class="text-[16px] font-semibold text-slate-800">Motorcycle</div>
-            <div class="flex justify-between">
-              <div class="text-[24px] font-semibold pt-1">17.4K</div>
-              <div class="text-[11px] font-semibold pt-2 mr-8">Vehicles</div>
-            </div>
-          </div>
-        </mat-card-content>
-        <mat-card-footer
-          class="pt-2 mt-3 text-[11px] text-slate-500 flex justify-between content-end"
-        >
-          <span class="ml-3 text-black font-medium"> WoW -23% </span>
-          <span class="text-black font-medium"> MoM -23% </span>
-          <span class="mr-3 text-black font-medium"> YoY +20% </span>
-        </mat-card-footer>
-      </mat-card>
+        </div>
+        <div class="footer mt-6">
+          <span>MoM -23%</span>
+          <span>YoY +20%</span>
+        </div>
+      </div>
+      }
     </div>
   </div>
 </div>

@@ -21,12 +21,17 @@ import { CommonModule } from '@angular/common';
 export class Pdashboard implements AfterViewInit {
   checked = 1;
 
-
   dataEnvironmental = [
     { title: 'GHG Reduction', value: "37.3K", unit: 'kgCO₂eq' },
     { title: 'Solar Production', value: "29.4K", unit: 'KWh' },
     { title: 'Manageable Waste', value: "14.2", unit: 'Tons' },
     { title: 'Energy Consumption', value: "243", unit: 'KWh' },
+  ]
+
+  dataTraffic = [
+    { title: 'People Counting', car: "37.6K", unit: 'Peoples', motorcycle: "35.3K" },
+    { title: 'EAST Parking', car: "91.2K", unit: 'Vehicles', motorcycle: "72.3K" },
+    { title: 'WEST Parking', car: "9.3K", unit: 'Vehicles', motorcycle: "17.4K" }, 
   ]
   
   activeDate = 0;
