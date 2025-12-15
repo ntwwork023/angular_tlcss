@@ -150,6 +150,7 @@ mat-button-toggle {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: space-between;
+  padding-top: 50px;
 }
 
 .time-box {
@@ -192,7 +193,7 @@ mat-button-toggle {
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .t-box {
     display: flex;
     flex-direction: column;
