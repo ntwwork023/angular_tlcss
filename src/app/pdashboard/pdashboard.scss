@@ -22,13 +22,17 @@ mat-button-toggle {
     font-size: 24px;
     font-weight: 700;
     }
+
+  .alert{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
   .test-box {
     display: flex;
     flex-direction: column;
-    // width: 200px;
     height: 216px;
     gap: 20px;
-
     p {
       font-size: 24px;
       font-weight: 500;
@@ -184,6 +188,11 @@ mat-button-toggle {
   padding: 15px 15px 5px 15px;
   border-radius: 6px;
 
+  .alert{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
   .t-box {
     display: flex;
     flex-direction: column;
