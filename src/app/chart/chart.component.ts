@@ -18,7 +18,8 @@ export class ChartComponent  {
 
    ngAfterViewInit() {
       const ctx = this.chartCanvas.nativeElement.getContext('2d');
-  
+      this.chartCanvas.nativeElement.height = 200;
+
       if (!ctx) return; // กัน DOM null (SSR-safe)
       new Chart(
         ctx, this.data

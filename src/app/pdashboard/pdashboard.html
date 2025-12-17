@@ -240,7 +240,7 @@
     </div>
 
     <div class="header-box">
-      <h1 class="text-xl font-semibold">Performance Monitoring Dashboard</h1>
+      <h1 class="text-xl font-semibold">Solar Energy Production</h1>
 
       <div animationDuration="0ms" class="time-box">
         <div
@@ -259,14 +259,16 @@
         </div>
       </div>
     </div>
+    <!-- CHART -->
     <div>
-      <app-chart [data]="datachart"> </app-chart>
+      <app-chart [data]="config"> </app-chart>
     </div>
+
   </div>
 
   <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col gap-2">
     <h1 class="text-xl font-semibold">Traffic Performance</h1>
-    <div class="grid grid-cols-4 gap-2">
+    <div class="grid gap-2 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
       <!-- Traffic Status -->
       <!-- <mat-card
         appearance="outlined"
