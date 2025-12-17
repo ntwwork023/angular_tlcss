@@ -12,7 +12,9 @@ mat-button-toggle {
   border: 1px solid #c4c6d0;
   padding: 15px;
   border-radius: 6px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .status-card{
     display: flex;
@@ -26,7 +28,9 @@ mat-button-toggle {
 
   .alert{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
   }
   
   .test-box {
@@ -34,6 +38,7 @@ mat-button-toggle {
     flex-direction: column;
     height: 216px;
     gap: 20px;
+
     p {
       font-size: 24px;
       font-weight: 500;
@@ -98,6 +103,7 @@ mat-button-toggle {
   .footer {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     span {
       font-size: 14px;
       font-weight: 500;
@@ -192,14 +198,15 @@ mat-button-toggle {
 
   .alert{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
   }
 
   .t-box {
     display: flex;
     flex-direction: column;
     // width: 200px;
-    height: 216px;
     gap: 20px;
 
     p {
@@ -266,9 +273,9 @@ mat-button-toggle {
   .footert {
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
+    margin-top: 10px;
     span {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
     }
   }
