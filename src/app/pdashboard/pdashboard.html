@@ -263,7 +263,6 @@
     <div>
       <app-chart [data]="config"> </app-chart>
     </div>
-
   </div>
 
   <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col gap-2">
@@ -517,4 +516,16 @@
       }
     </div>
   </div>
+    <div class="box">
+      <h1 class="text-xl font-semibold">Chart</h1>
+      <app-chart [data]="config1"> </app-chart>
+     <div class="grid gap-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1">
+      <app-chart [data]="donut"> </app-chart>
+      <app-chart [data]="pie"> </app-chart>
+      </div>
+    </div>
+  <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col gap-2">
+  table
+  </div>
 </div>
+

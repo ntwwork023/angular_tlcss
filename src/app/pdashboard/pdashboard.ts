@@ -4,6 +4,9 @@ import { MatCardModule } from '@angular/material/card';
 import { ChartComponent } from '../chart/chart.component';
 import { Tooltip } from 'chart.js';
 import { CommonModule } from '@angular/common';
+import { Chart } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels);
 
 @Component({
   selector: 'app-pdashboard',
@@ -14,7 +17,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Pdashboard implements AfterViewInit {
   checked = 1;
-
+  
   chartData: any = { labels: [], datasets: [] };
 
   dataEnvironmental = [
@@ -58,7 +61,7 @@ export class Pdashboard implements AfterViewInit {
       backgroundColor: '#00DBA3',
        borderRadius: 10,
        borderSkipped: false,
-      order: 1
+      order: 1,
     },
     {
       label: 'Dataset 2',
@@ -69,7 +72,26 @@ export class Pdashboard implements AfterViewInit {
       borderDash: [10],
       backgroundColor: 'rgba(255, 0, 0, 0.7)',
       type: 'line',
-      order: 0
+      order: 0,
+      datalabels: { display: false }
+    }
+  ]
+};
+
+data1 = {
+  labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: [300, 50, 100, 40, 120],
+      backgroundColor: [
+        '#d52e2eff',
+        '#FF9F43',
+        '#FFDD59',
+        '#00DBA3', 
+        '#3742FA'
+      ],
+      hoverOffset: 4
     }
   ]
 };
@@ -84,14 +106,97 @@ config = {
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Chart.js Combined Line/Bar Chart'
-      }
+      datalabels: {
+        anchor: 'end',   
+        align: 'end',    
+        offset: 6,
+        clamp: true,
+        formatter: (value: any) => `${value} kWh`, // จะใส่หน่วยเองก็ได้ เช่น `${value} kWh`
+        font: { size: 11, weight: '600' },
+      },
     }
-  },
+  }
 };
 
+config1 = {
+  type: 'bar',
+  data: this.data,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Horizontal Combined Line/Bar Chart'
+      },
+      datalabels: {
+        anchor: 'end',   
+        align: 'end',    
+        offset: 6,
+        clamp: true,
+        formatter: (value: any) => value, // จะใส่หน่วยเองก็ได้ เช่น `${value} kWh`
+        font: { size: 11, weight: '600' },
+      },
+    }
+  }
+};
+donut = {
+  type: 'doughnut',
+  data: this.data1,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Doughnut Chart'
+      },
+      datalabels: {
+        anchor: 'end',   
+        align: 'end',    
+        offset: 6,
+        clamp: true,
+        formatter: (value: any) => value, // จะใส่หน่วยเองก็ได้ เช่น `${value} kWh`
+        font: { size: 11, weight: '600' },
+      },
+    }
+  }
+};
+
+pie = {
+  type: 'pie',
+  data: this.data1,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Pie Chart'
+      },
+      datalabels: {
+        anchor: 'end',   
+        align: 'end',    
+        offset: 6,
+        clamp: true,
+        formatter: (value: any) => value, // จะใส่หน่วยเองก็ได้ เช่น `${value} kWh`
+        font: { size: 11, weight: '600' },
+      },
+    }
+  }
+};
   toggleSingleSelectionIndicator() {
     this.hideSingleSelectionIndicator.update((value) => !value);
   }
