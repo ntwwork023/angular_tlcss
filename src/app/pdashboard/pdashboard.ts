@@ -41,6 +41,7 @@ export class Pdashboard implements AfterViewInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+  
   checked = 1;
   chartData: any = { labels: [], datasets: [] };
 
