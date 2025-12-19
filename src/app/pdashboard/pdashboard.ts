@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, signal, AfterViewInit } from '@angu
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { ChartComponent } from '../chart/chart.component';
-import { Tooltip } from 'chart.js';
 import { CommonModule } from '@angular/common';
 import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
