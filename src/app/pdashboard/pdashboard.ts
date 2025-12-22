@@ -87,6 +87,7 @@ export class Pdashboard implements AfterViewInit {
        borderRadius: 10,
        borderSkipped: false,
       order: 1,
+      
     },
     {
       label: 'Dataset 2',
